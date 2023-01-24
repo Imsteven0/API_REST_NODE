@@ -1,13 +1,15 @@
+require('dotenv').config();
+
 var dbConfig = {
-    user: 'SIAOwebUSER',
-    password: 'gg1w:BNDXTT]%cXX', 
-    server: 'localhost',
-    database: 'Web',
-    options:{
+    user: process.env.DBUSER,
+    password: process.env.DBPASSWORD,
+    server: process.env.DBSERVER,
+    database: process.env.DBDEFAULT,
+    options: {
         trustServerCertificate: true
     }
 };
-module.exports= dbConfig;
+module.exports = dbConfig;
 
 
 
