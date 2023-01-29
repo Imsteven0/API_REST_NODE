@@ -4,6 +4,8 @@ const auth = require("../auth/AuthAPI")
 
 const ControllerProducts = require('../controllers/ControllerProducts');
 
+const ControllerCedulas = require('../controllers/ControllerCedulas');
+
 module.exports = function () {
 
     /** APIREST Para listar los productos.**/
@@ -17,6 +19,10 @@ module.exports = function () {
 
     /** APIREST Para agregar un producto por medio de un req.body.**/
     router.post('/AddProduct', auth, ControllerProducts.AddProduct)
+
+    /** APIREST Para eliminar un producto por un id.**/
+    router.get('/Ced/:id', ControllerCedulas.ListCedulas) 
+
 
     return router;
 }

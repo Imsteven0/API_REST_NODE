@@ -32,7 +32,7 @@ exports.DeleteProduct = async (req, res, next) => {
     });
 };
 
-/** Eliminar producto en especifico.**/
+/** agregar producto en especifico.**/
 exports.AddProduct = async (req, res, next) => {
     await dbProducts.AddProduct(req.body).then(function (value) {
         res.status(200).json(value)
